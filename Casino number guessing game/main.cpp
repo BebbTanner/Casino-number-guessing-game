@@ -11,10 +11,10 @@ Generate the random number
 		$21 - $60
 	hard X
 		$61 - $100
-Player information
+Player information X
 	Create a player class X
 	Bank amount X
-	Name
+	Name X
 
 */
 
@@ -24,7 +24,7 @@ Player information
 int main() {
 	using namespace std;
 
-	playerInfo myObj;
+	playerInfo p;
 	int easyNum, medNum, hardNum;
 
 	/*
