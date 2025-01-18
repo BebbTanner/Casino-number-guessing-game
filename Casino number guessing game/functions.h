@@ -13,13 +13,17 @@ void introduction() {
 	system("pause");
 }
 
-//Definition of the generateNum function
-void generateNum(int &x, int &y, int &z) {
-	using namespace std;
-	srand(time(0));
-
+//Definition of the genEasyNum funciton
+void genEasyNum(int &x) {
 	x = rand() % 11;
-	y = rand() % 26;
-	z = rand() % 101;
+}
 
+//Definition of the genMedNum function
+void genMedNum(int &x) {
+	x = rand() % 26;
+}
+
+//Definition of the genHardNum function
+void genHardNum(int &x) {
+	x = rand() % 26;
 }

@@ -16,16 +16,13 @@ Difficulty increase.
 int main() {
 	using namespace std;
 
-	int easyNum = 0, medNum = 0, hardNum = 0;
+	int easyNum, medNum, hardNum;
 
 	/*
 	This will make a call to the defined function.
 	This function is declared and defined the the functions header file.
 	*/
 	introduction();
-
-	generateNum(easyNum, medNum, hardNum);
 	
 	return 0;
 }
-
