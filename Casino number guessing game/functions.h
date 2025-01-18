@@ -30,15 +30,18 @@ void introduction() {
 
 //Definition of the genEasyNum funciton
 void genEasyNum(int &x) {
+	srand(time(0));
 	x = rand() % 10 + 1;
 }
 
 //Definition of the genMedNum function
 void genMedNum(int &x) {
+	srand(time(0));
 	x = rand() % 25 + 1;
 }
 
 //Definition of the genHardNum function
 void genHardNum(int &x) {
+	srand(time(0));
 	x = rand() % 50 + 1;
 }

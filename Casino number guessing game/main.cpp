@@ -26,14 +26,36 @@ Ask the user if they would like to play again.
 
 Add a score board?
 
-*/
+*/ 
 
 #include "functions.h"
 
 int main() {
 	using namespace std;
+	int easyNum, playerGuess;
 
-	introduction();
+	//introduction();
+
+	genEasyNum(easyNum);
+
+	cout << "The dealer has generated a number." << endl;
+	cout << "Please guess a number (1-10): " << endl;
+	cin >> playerGuess;
+
+	if (playerGuess == easyNum) {
+		cout << "Your number is: " << playerGuess << endl;
+		cout << "The dealer number is. . . " << endl;
+		cout << easyNum << endl;
+		cout << "Congradulations, you won this round!" << endl;
+
+		/*There needs to be some command or function that will add $5 dollars to the player's bank.*/
+	}
+	else {
+		cout << "Your number is: " << playerGuess << endl;
+		cout << "The dealer number is. . . " << endl;
+		cout << easyNum << endl;
+		cout << "You lost." << endl;
+	}
 
 	return 0;
 }
