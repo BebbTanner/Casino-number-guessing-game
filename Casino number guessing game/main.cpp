@@ -5,7 +5,14 @@ The winning prize depends on the difficulty of the game. The program implements 
 It also uses other features such as loops and conditionals to create a logical structure. Furthermore, it makes use of the standard template library to implement basic operations and other data structures.
 
 Generate the random number
-Player guess
+	easy X
+	medium X
+	hard X
+Player information
+	Create a player class
+	Bank amount 
+	Name
+
 Compare the two numbers
 Difficulty increase.
 */
@@ -16,6 +23,7 @@ Difficulty increase.
 int main() {
 	using namespace std;
 
+	playerInfo myObj;
 	int easyNum, medNum, hardNum;
 
 	/*
