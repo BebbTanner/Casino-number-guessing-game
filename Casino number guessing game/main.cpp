@@ -11,7 +11,7 @@ Generate the random number
 Player information
 	Create a player class X
 	Bank amount X
-	Name X
+	Name
 
 Compare the two numbers
 Difficulty increase.
@@ -31,6 +31,6 @@ int main() {
 	This function is declared and defined the the functions header file.
 	*/
 	introduction();
-	
+
 	return 0;
 }
