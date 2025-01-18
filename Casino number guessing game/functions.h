@@ -14,7 +14,12 @@ void introduction() {
 }
 
 //Definition of the generateNum function
-void generateNum() {
+void generateNum(int &x, int &y, int &z) {
 	using namespace std;
+	srand(time(0));
+
+	x = rand() % 11;
+	y = rand() % 26;
+	z = rand() % 101;
 
 }
