@@ -10,16 +10,16 @@ Compare the two numbers
 Difficulty increase.
 */
 
-//#include <iostream>
-#include <cstdlib>
-#include <ctime>
 #include "classes.h"
 #include "functions.h"
 
 int main() {
 	using namespace std;
 
-	//This will make a call to the defined function.
+	/*
+	This will make a call to the defined function.
+	This function is declared and defined the the functions header file.
+	*/
 	introduction();
 	
 	return 0;
