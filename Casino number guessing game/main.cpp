@@ -10,15 +10,13 @@ Compare the two numbers
 Difficulty increase.
 */
 
-#include <iostream>
+//#include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include "myHeader.h"
+#include "classes.h"
+#include "functions.h"
 
 
-void introduction();
-
-void generateNum();
 
 int main() {
 	using namespace std;
@@ -29,13 +27,3 @@ int main() {
 	return 0;
 }
 
-//Definition of the introduction function
-void introduction() {
-	using namespace std;
-
-}
-
-void generateNum() {
-	using namespace std;
-		
-}
