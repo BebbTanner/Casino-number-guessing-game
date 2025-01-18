@@ -45,6 +45,7 @@ int main() {
 	if (playerGuess == easyNum) {
 		cout << "Your number is: " << playerGuess << endl;
 		cout << "The dealer number is. . . " << endl;
+		this_thread::sleep_for(chrono::seconds(3));
 		cout << easyNum << endl;
 		cout << "Congradulations, you won this round!" << endl;
 
@@ -53,8 +54,11 @@ int main() {
 	else {
 		cout << "Your number is: " << playerGuess << endl;
 		cout << "The dealer number is. . . " << endl;
+		this_thread::sleep_for(chrono::seconds(3));
 		cout << easyNum << endl;
 		cout << "You lost." << endl;
+
+		/*There needs to be some command or function that asks the player if they would like to start again.*/
 	}
 
 	return 0;
