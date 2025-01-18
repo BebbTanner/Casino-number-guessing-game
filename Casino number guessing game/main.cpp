@@ -27,11 +27,5 @@ int main() {
 	playerInfo p;
 	int easyNum, medNum, hardNum;
 
-	/*
-	This will make a call to the defined function.
-	This function is declared and defined the the functions header file.
-	*/
-	introduction();
-
 	return 0;
 }
