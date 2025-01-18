@@ -6,15 +6,16 @@ It also uses other features such as loops and conditionals to create a logical s
 
 Generate the random number
 	easy X
+		$0 - $20
 	medium X
+		$21 - $60
 	hard X
+		$61 - $100
 Player information
 	Create a player class X
 	Bank amount X
 	Name
 
-Compare the two numbers
-Difficulty increase.
 */
 
 #include "classes.h"
