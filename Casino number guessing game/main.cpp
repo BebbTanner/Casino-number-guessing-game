@@ -16,8 +16,6 @@ Difficulty increase.
 #include "classes.h"
 #include "functions.h"
 
-
-
 int main() {
 	using namespace std;
 

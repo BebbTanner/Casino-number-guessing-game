@@ -4,8 +4,6 @@
 void introduction() {
 	using namespace std;
 
-	cout << "This is just a test" << endl;
-
 }
 
 //Definition of the generateNum function
