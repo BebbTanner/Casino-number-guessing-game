@@ -9,9 +9,9 @@ Generate the random number
 	medium X
 	hard X
 Player information
-	Create a player class
-	Bank amount 
-	Name
+	Create a player class X
+	Bank amount X
+	Name X
 
 Compare the two numbers
 Difficulty increase.
