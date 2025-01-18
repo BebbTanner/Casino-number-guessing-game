@@ -29,37 +29,18 @@ Add a score board?
 */ 
 
 #include "functions.h"
+#include "classes.h"
+using namespace std;
 
 int main() {
-	using namespace std;
-	int easyNum, playerGuess;
 
-	//introduction();
+	introduction();
 
-	genEasyNum(easyNum);
+	easyMode();
 
-	cout << "The dealer has generated a number." << endl;
-	cout << "Please guess a number (1-10): " << endl;
-	cin >> playerGuess;
+	mediumMode();
 
-	if (playerGuess == easyNum) {
-		cout << "Your number is: " << playerGuess << endl;
-		cout << "The dealer number is. . . " << endl;
-		this_thread::sleep_for(chrono::seconds(3));
-		cout << easyNum << endl;
-		cout << "Congradulations, you won this round!" << endl;
-
-		/*There needs to be some command or function that will add $5 dollars to the player's bank.*/
-	}
-	else {
-		cout << "Your number is: " << playerGuess << endl;
-		cout << "The dealer number is. . . " << endl;
-		this_thread::sleep_for(chrono::seconds(3));
-		cout << easyNum << endl;
-		cout << "You lost." << endl;
-
-		/*There needs to be some command or function that asks the player if they would like to start again.*/
-	}
+	hardMode();
 
 	return 0;
 }

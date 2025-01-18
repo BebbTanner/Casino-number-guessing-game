@@ -5,11 +5,13 @@
 #include <thread>
 #include "classes.h"
 
+/*Global variables*/
+playerInfo p;
+int playerGuess, easyNum, medNum, hardNum;
 
 //Definition of the introduction function
 void introduction() {
 	using namespace std;
-	playerInfo p;
 
 	cout << "Please enter your name: " << endl;
 	cin >> p.playerName;
@@ -29,19 +31,47 @@ void introduction() {
 }
 
 //Definition of the genEasyNum funciton
-void genEasyNum(int &x) {
+void easyMode() {
+	using namespace std;
 	srand(time(0));
-	x = rand() % 10 + 1;
+	easyNum = rand() % 10 + 1;
+
+
+	cout << "The dealer has generated a number." << endl;
+	cout << "Please guess a number (1-10): " << endl;
+	cin >> playerGuess;
+
+	if (playerGuess == easyNum) {
+		cout << "Your number is: " << playerGuess << endl;
+		cout << "The dealer number is. . . " << endl;
+		this_thread::sleep_for(chrono::seconds(3));
+		cout << easyNum << endl;
+		cout << "Congradulations, you won this round!" << endl;
+
+		/*There needs to be some command or function that will add $5 dollars to the player's bank.*/
+	}
+	else {
+		cout << "Your number is: " << playerGuess << endl;
+		cout << "The dealer number is. . . " << endl;
+		this_thread::sleep_for(chrono::seconds(3));
+		cout << easyNum << endl;
+		cout << "You lost." << endl;
+
+		/*There needs to be some command or function that asks the player if they would like to start again.*/
+	}
+
 }
 
 //Definition of the genMedNum function
-void genMedNum(int &x) {
+void mediumMode() {
+	using namespace std;
 	srand(time(0));
-	x = rand() % 25 + 1;
+	medNum = rand() % 25 + 1;
 }
 
 //Definition of the genHardNum function
-void genHardNum(int &x) {
+void hardMode() {
+	using namespace std;
 	srand(time(0));
-	x = rand() % 50 + 1;
+	hardNum = rand() % 50 + 1;
 }
