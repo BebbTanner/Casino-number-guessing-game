@@ -24,32 +24,12 @@ Add a score board?
 
 */
 
-#include "classes.h"
 #include "functions.h"
-#include <chrono>
-#include <thread>
 
 int main() {
 	using namespace std;
 
-	playerInfo p;
-	int easyNum, medNum, hardNum;
-
-	cout << "Please enter your name: " << endl;
-	cin >> p.playerName;
-	cout << endl; 
-	cout << "Welcome, " << p.playerName << " to Bruce's casino!" << endl;
-	this_thread::sleep_for(chrono::seconds(5));
-	cout << "You will be playing a number guessing game with the dealer." << endl;
-	this_thread::sleep_for(chrono::seconds(5));
-	cout << "Each time you guess correctly you will be rewarded with some money." << endl;
-	this_thread::sleep_for(chrono::seconds(5));
-	cout << "The more money you have, the harder the game will get." << endl;
-	this_thread::sleep_for(chrono::seconds(5));
-	cout << "The harder the difficulty gets, you will be rewared with more money." << endl;
-	this_thread::sleep_for(chrono::seconds(5));
-	cout << "Are you ready to play, " << p.playerName << "?" << endl;
-	system("pause");
+	introduction();
 
 	return 0;
 }
