@@ -15,15 +15,15 @@ void introduction() {
 
 //Definition of the genEasyNum funciton
 void genEasyNum(int &x) {
-	x = rand() % 11;
+	x = rand() % 10 + 1;
 }
 
 //Definition of the genMedNum function
 void genMedNum(int &x) {
-	x = rand() % 26;
+	x = rand() % 25 + 1;
 }
 
 //Definition of the genHardNum function
 void genHardNum(int &x) {
-	x = rand() % 26;
+	x = rand() % 50 + 1;
 }
