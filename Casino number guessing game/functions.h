@@ -54,7 +54,6 @@ void easyMode() {
 		cout << "Congradulations, you won this round!" << endl;
 
 		p.playerCash = p.playerCash + 5;
-		cout << p.playerCash << endl;
 	}
 	else if(playerGuess != easyNum) {
 		cout << "Your number is: " << playerGuess << endl;

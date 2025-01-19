@@ -49,16 +49,20 @@ int main() {
 	win == true
 	}*/
 
+
+	//Now the gameplay loop works. I need to figure out how to break out when the player guesses incorrectly.
 	do {
 		easyMode();
 
 		if (p.playerCash == 20 && win == true) {
+			cout << "Lets up difficulty shall we?" << endl;
+			break;
+		}
+		else if (playerGuess != easyNum) {
 			break;
 		}
 
 	} while ((p.playerCash > 0 || p.playerCash < 20) && win == true);
-
-	cout << "You broke out of the loop" << endl;
 
 	return 0;
 }
