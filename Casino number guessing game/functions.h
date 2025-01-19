@@ -54,7 +54,7 @@ void easyMode() {
 
 		p.playerCash = p.playerCash + 5;
 	}
-	else {
+	else if(playerGuess != easyNum) {
 		cout << "Your number is: " << playerGuess << endl;
 		cout << "The dealer number is. . . ";
 		this_thread::sleep_for(chrono::seconds(3));
@@ -119,6 +119,7 @@ void hardMode() {
 		cout << "Congradulations, you won this round!" << endl;
 
 		p.playerCash = p.playerCash + 20;
+		cout << "Current cash: $" << p.playerCash << endl;
 	}
 	else {
 		cout << "Your number is: " << playerGuess << endl;
@@ -126,9 +127,9 @@ void hardMode() {
 		this_thread::sleep_for(chrono::seconds(3));
 		cout << easyNum << endl;
 		cout << "You lost." << endl;
-	}
 
-	cout << "Current cash: $" << p.playerCash << endl;
+		cout << p.playerName << " Score: $" << p.playerCash << endl;
+	}
 
 	cout << endl;
 }
