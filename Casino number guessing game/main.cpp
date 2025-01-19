@@ -35,7 +35,13 @@ int main() {
 
 	//introduction();
 
-	gambling();
+	//gambling();
+
+	//easyMode();
+
+	//mediumMode();
+
+	//hardMode();
 
 	return 0;
 }
