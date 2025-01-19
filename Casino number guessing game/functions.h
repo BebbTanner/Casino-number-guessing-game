@@ -8,6 +8,7 @@
 
 /*Global variables*/
 int playerGuess;
+bool win = true;
 
 	//	do {
 	//		easyMode();
@@ -48,23 +49,39 @@ void introduction() {
 
 /*This will cycle through the different difficulty types.*/
 void easyLoop() {
+/*
+To do:
+
+Add condition that checks the playerCash amount.			X
+	If it is more than $20, break out of the loop.			X
+
+Generate a random number for each case.
+
+*/
 	using namespace std;
 	int easyNum = rng.generateRandomNum(1, 10);
 
-	//cout << easyNum << endl;
+	cout << easyNum << endl;
 
-	cout << "Guess a number (1- 10): " << endl;
-	cin >> playerGuess;
-	cout << "The number is. . . " << easyNum << endl;
+	//The do while loop works correctly however, once it generates the random number that is the number used for each case.
+	do {
 
-	if (playerGuess == easyNum) {
-		cout << "You won" << endl;
+		cout << "Guess a number (1- 10): " << endl;
+		cin >> playerGuess;
+		cout << "The number is. . . " << easyNum << endl;
 
-		p.playerCash = p.playerCash + 5;
-	}
+		if (playerGuess == easyNum) {
+			cout << "You won" << endl;
 
-	else if (playerGuess != easyNum) {
-		cout << "You lose" << endl;
-	}
+			p.playerCash = p.playerCash + 5;
+		}
+
+		else if (playerGuess != easyNum) {
+			win = false;
+			cout << "You lose" << endl;
+			break;
+		}
+
+	} while (p.playerCash < 20 && win == true);
 
 }

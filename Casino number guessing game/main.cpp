@@ -18,7 +18,7 @@ int main() {
 
 	//hardNum();
 
-	easyLoop();
+	//easyLoop();
 
 	return 0;
 }
