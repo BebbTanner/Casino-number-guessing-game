@@ -43,5 +43,17 @@ int main() {
 
 	//hardMode();
 
+	/*Conditions for easy mode loop:
+	player cash > 0
+	player cash < 20
+	win == true
+	
+	When the player hits $20, the loop keeps going becuase win is still equal to true.*/
+
+	do{
+		easyMode();
+	} while ((p.playerCash > 0 || p.playerCash <= 20) && win == true);
+
+
 	return 0;
 }

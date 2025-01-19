@@ -8,6 +8,7 @@
 
 /*Global variables*/
 int playerGuess, easyNum, medNum, hardNum;
+bool win = true;
 
 
 //Definition of the introduction function
@@ -53,8 +54,10 @@ void easyMode() {
 		cout << "Congradulations, you won this round!" << endl;
 
 		p.playerCash = p.playerCash + 5;
+		cout << p.playerCash << endl;
 	}
 	else if(playerGuess != easyNum) {
+		win = false;
 		cout << "Your number is: " << playerGuess << endl;
 		cout << "The dealer number is. . . ";
 		this_thread::sleep_for(chrono::seconds(3));
@@ -135,30 +138,5 @@ void hardMode() {
 
 
 void gambling() {
-	do {
-		easyMode();
-	} while (p.playerCash < 20);
 
-	cout << "Current cash: $" << p.playerCash << endl;
-	cout << "Let's kick up the difficulty shall we?" << endl;
-	system("pause");
-	cout << endl;
-
-	do {
-		mediumMode();
-	} while (p.playerCash < 100);
-
-	cout << "Current cash: $" << p.playerCash << endl;
-	cout << "Let's kick up the difficulty shall we?" << endl;
-	this_thread::sleep_for(chrono::seconds(3));
-	cout << "This is the final difficulty increase." << endl;
-	this_thread::sleep_for(chrono::seconds(3));
-	cout << "The sky is the limit on winnings." << endl;
-	this_thread::sleep_for(chrono::seconds(3));
-	cout << "Good luck." << endl;
-	system("pause");
-
-	do {
-		hardMode();
-	} while (p.playerCash > 100);
 }
