@@ -39,13 +39,13 @@ int main() {
 		easyMode();
 	} while (p.playerCash < 20);
 
-	/*do {
+	do {
 		mediumMode();
-	} while (p.playerCash > 20 || p.playerCash < 100);
+	} while (p.playerCash < 100);
 
 	do {
 		hardMode();
-	} while (p.playerCash > 100);*/
+	} while (p.playerCash > 100);
 
 	return 0;
 }

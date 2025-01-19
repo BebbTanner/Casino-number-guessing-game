@@ -61,8 +61,6 @@ void easyMode() {
 		this_thread::sleep_for(chrono::seconds(3));
 		cout << easyNum << endl;
 		cout << "You lost." << endl;
-
-		/*There needs to be some command or function that asks the player if they would like to start again.*/
 	}
 
 	cout << endl;
@@ -75,6 +73,32 @@ void mediumMode() {
 	using namespace std;
 	srand(time(0));
 	medNum = 1;//rand() % 25 + 1;
+
+	cout << "The dealer has generated a number." << endl;
+	cout << "Please guess a number (1-25): " << endl;
+	cin >> playerGuess;
+	cout << endl;
+
+	if (playerGuess == easyNum) {
+		cout << "Your number is: " << playerGuess << endl;
+		cout << "The dealer number is. . . ";
+		this_thread::sleep_for(chrono::seconds(3));
+		cout << easyNum << endl;
+		cout << "Congradulations, you won this round!" << endl;
+
+		p.playerCash = p.playerCash + 10;
+
+		cout << "$" << p.playerCash << endl;
+	}
+	else {
+		cout << "Your number is: " << playerGuess << endl;
+		cout << "The dealer number is. . . ";
+		this_thread::sleep_for(chrono::seconds(3));
+		cout << easyNum << endl;
+		cout << "You lost." << endl;
+	}
+
+	cout << endl;
 }
 
 //Definition of the genHardNum function
@@ -82,4 +106,30 @@ void hardMode() {
 	using namespace std;
 	srand(time(0));
 	hardNum = 1; //rand() % 50 + 1;
+
+	cout << "The dealer has generated a number." << endl;
+	cout << "Please guess a number (1-50): " << endl;
+	cin >> playerGuess;
+	cout << endl;
+
+	if (playerGuess == easyNum) {
+		cout << "Your number is: " << playerGuess << endl;
+		cout << "The dealer number is. . . ";
+		this_thread::sleep_for(chrono::seconds(3));
+		cout << easyNum << endl;
+		cout << "Congradulations, you won this round!" << endl;
+
+		p.playerCash = p.playerCash + 20;
+
+		cout << "$" << p.playerCash << endl;
+	}
+	else {
+		cout << "Your number is: " << playerGuess << endl;
+		cout << "The dealer number is. . . ";
+		this_thread::sleep_for(chrono::seconds(3));
+		cout << easyNum << endl;
+		cout << "You lost." << endl;
+	}
+
+	cout << endl;
 }
