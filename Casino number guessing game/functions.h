@@ -42,10 +42,11 @@ void easyMode() {
 	cout << "The dealer has generated a number." << endl;
 	cout << "Please guess a number (1-10): " << endl;
 	cin >> playerGuess;
+	cout << endl;
 
 	if (playerGuess == easyNum) {
 		cout << "Your number is: " << playerGuess << endl;
-		cout << "The dealer number is. . . " << endl;
+		cout << "The dealer number is. . . ";
 		this_thread::sleep_for(chrono::seconds(3));
 		cout << easyNum << endl;
 		cout << "Congradulations, you won this round!" << endl;
@@ -56,13 +57,15 @@ void easyMode() {
 	}
 	else {
 		cout << "Your number is: " << playerGuess << endl;
-		cout << "The dealer number is. . . " << endl;
+		cout << "The dealer number is. . . ";
 		this_thread::sleep_for(chrono::seconds(3));
 		cout << easyNum << endl;
 		cout << "You lost." << endl;
 
 		/*There needs to be some command or function that asks the player if they would like to start again.*/
 	}
+
+	cout << endl;
 
 }
 
@@ -79,21 +82,4 @@ void hardMode() {
 	using namespace std;
 	srand(time(0));
 	hardNum = 1; //rand() % 50 + 1;
-}
-
-
-//main loop?
-void checkBank() {
-	if (p.playerCash > 0 || p.playerCash <= 20) {
-		easyMode();
-		cout  << "$" << p.playerCash << endl;
-	}
-	else if (p.playerCash > 20 || p.playerCash <= 100) {
-		mediumMode();
-		cout << "$" << p.playerCash << endl;
-	}
-	else if (p.playerCash > 100) {
-		hardMode();
-		cout << "$" << p.playerCash << endl;
-	}
 }
