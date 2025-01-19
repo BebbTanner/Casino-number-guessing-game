@@ -4,10 +4,12 @@
 #include <chrono>
 #include <thread>
 #include "classes.h"
+#pragma once
 
 /*Global variables*/
 playerInfo p;
 int playerGuess, easyNum, medNum, hardNum;
+
 
 //Definition of the introduction function
 void introduction() {
@@ -30,11 +32,12 @@ void introduction() {
 	system("pause");
 }
 
+
 //Definition of the genEasyNum funciton
 void easyMode() {
 	using namespace std;
 	srand(time(0));
-	easyNum = rand() % 10 + 1;
+	easyNum = 1; //rand() % 10 + 1;
 
 
 	cout << "The dealer has generated a number." << endl;
@@ -48,7 +51,9 @@ void easyMode() {
 		cout << easyNum << endl;
 		cout << "Congradulations, you won this round!" << endl;
 
-		/*There needs to be some command or function that will add $5 dollars to the player's bank.*/
+		p.playerCash = p.playerCash + 5;
+
+		cout << "$" << p.playerCash << endl;
 	}
 	else {
 		cout << "Your number is: " << playerGuess << endl;
@@ -62,6 +67,7 @@ void easyMode() {
 
 }
 
+
 //Definition of the genMedNum function
 void mediumMode() {
 	using namespace std;
@@ -74,4 +80,18 @@ void hardMode() {
 	using namespace std;
 	srand(time(0));
 	hardNum = rand() % 50 + 1;
+}
+
+
+//main loop?
+void checkBank() {
+	if (p.playerCash > 0 || p.playerCash <= 20) {
+		easyMode();
+	}
+	else if (p.playerCash > 20 || p.playerCash <= 100) {
+		mediumMode();
+	}
+	else if (p.playerCash > 100) {
+		hardMode();
+	}
 }

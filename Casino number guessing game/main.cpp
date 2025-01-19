@@ -29,18 +29,9 @@ Add a score board?
 */ 
 
 #include "functions.h"
-#include "classes.h"
 using namespace std;
 
 int main() {
-
-	introduction();
-
-	easyMode();
-
-	mediumMode();
-
-	hardMode();
 
 	return 0;
 }
