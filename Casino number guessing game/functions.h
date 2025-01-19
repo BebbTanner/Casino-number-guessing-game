@@ -128,5 +128,9 @@ void hardMode() {
 		cout << "You lost." << endl;
 	}
 
+	cout << "Current cash: $" << p.playerCash << endl;
+
 	cout << endl;
 }
+
+
