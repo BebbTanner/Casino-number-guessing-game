@@ -7,6 +7,7 @@
 #pragma once
 
 /*Global variables*/
+int playerGuess;
 
 	//	do {
 	//		easyMode();
@@ -46,7 +47,7 @@ void introduction() {
 }
 
 void easyNum() {
-	rng.generateRandomNum(1, 10);
+	cout << rng.generateRandomNum(1, 10) << endl;
 }
 
 void mediumNum() {
@@ -59,5 +60,10 @@ void hardNum() {
 
 /*This will cycle through the different difficulty types.*/
 void gameplayLoop() {
+	using namespace std;
 
+	cout << "Guess a number (1- 10): " << endl;
+	cin >> playerGuess;
+	cout << "The number is. . . " << endl;
+	easyNum();
 }
