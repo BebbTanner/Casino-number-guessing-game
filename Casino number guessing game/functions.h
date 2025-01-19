@@ -1,3 +1,22 @@
+/*Can I condense the random number generator to a single function?
+* Then, set conditions for the range based on playerCash value.
+* 
+* srand(time(0))
+* int randomNum;
+* 
+* if(p.playerCash < 20){
+*	randomNum = rand() % 10 + 1;
+* }
+* 
+* else if(p.playerCash == 20 && p.playerCash < 100){
+*	randomNum = rand() % 25 + 1;
+*  }
+* 
+* else if(p.playerCash >= 100){
+*  randomNum = rand() % 50 + 1;
+*  }
+*/
+
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -40,47 +59,12 @@ void easyMode() {
 	randomNum = 1; //rand() % 10 + 1;
 
 
-	cout << "The dealer has generated a number." << endl;
-	cout << "Please guess a number (1-10): " << endl;
+	cout << "The dealer has generated a number." << endl << "Please guess a number (1-25): " << endl;
 	cin >> playerGuess;
 	cout << endl;
 
 	if (playerGuess == randomNum) {
-		cout << "Your number is: " << playerGuess << endl;
-		cout << "The dealer number is. . . ";
-		this_thread::sleep_for(chrono::seconds(3));
-		cout << randomNum << endl;
-		cout << "Congradulations, you won this round!" << endl;
-
-		p.playerCash = p.playerCash + 5;
-	}
-	else if(playerGuess != randomNum) {
-		cout << "Your number is: " << playerGuess << endl;
-		cout << "The dealer number is. . . ";
-		this_thread::sleep_for(chrono::seconds(3));
-		cout << randomNum << endl;
-		cout << "You lost." << endl;
-	}
-
-	cout << endl;
-
-}
-
-
-//Definition of the genMedNum function
-void mediumMode() {
-	using namespace std;
-	srand(time(0));
-	randomNum = 2;//rand() % 25 + 1;
-
-	cout << "The dealer has generated a number." << endl;
-	cout << "Please guess a number (1-25): " << endl;
-	cin >> playerGuess;
-	cout << endl;
-
-	if (playerGuess == randomNum) {
-		cout << "Your number is: " << playerGuess << endl;
-		cout << "The dealer number is. . . ";
+		cout << "Your number is: " << playerGuess << endl << "The dealer number is. . . " << endl;
 		this_thread::sleep_for(chrono::seconds(3));
 		cout << randomNum << endl;
 		cout << "Congradulations, you won this round!" << endl;
@@ -88,47 +72,14 @@ void mediumMode() {
 		p.playerCash = p.playerCash + 10;
 	}
 	else {
-		cout << "Your number is: " << playerGuess << endl;
-		cout << "The dealer number is. . . ";
+		cout << "Your number is: " << playerGuess << endl << "The dealer number is. . . " << endl;
 		this_thread::sleep_for(chrono::seconds(3));
 		cout << randomNum << endl;
 		cout << "You lost." << endl;
 	}
 
 	cout << endl;
-}
 
-
-//Definition of the genHardNum function
-void hardMode() {
-	using namespace std;
-	srand(time(0));
-	randomNum = 3; //rand() % 50 + 1;
-
-	cout << "The dealer has generated a number." << endl;
-	cout << "Please guess a number (1-50): " << endl;
-	cin >> playerGuess;
-	cout << endl;
-
-	if (playerGuess == randomNum) {
-		cout << "Your number is: " << playerGuess << endl;
-			cout << "The dealer number is. . . ";
-			this_thread::sleep_for(chrono::seconds(3));
-			cout << randomNum << endl;
-			cout << "Congradulations, you won this round!" << endl;
-
-			p.playerCash = p.playerCash + 20;
-
-	}
-	else {
-		cout << "Your number is: " << playerGuess << endl;
-		cout << "The dealer number is. . . ";
-		this_thread::sleep_for(chrono::seconds(3));
-		cout << randomNum << endl;
-		cout << "You lost." << endl;
-	}
-
-	cout << endl;
 }
 
 
