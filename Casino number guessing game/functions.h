@@ -7,7 +7,6 @@
 #pragma once
 
 /*Global variables*/
-playerInfo p;
 int playerGuess, easyNum, medNum, hardNum;
 
 
@@ -72,14 +71,14 @@ void easyMode() {
 void mediumMode() {
 	using namespace std;
 	srand(time(0));
-	medNum = rand() % 25 + 1;
+	medNum = 1;//rand() % 25 + 1;
 }
 
 //Definition of the genHardNum function
 void hardMode() {
 	using namespace std;
 	srand(time(0));
-	hardNum = rand() % 50 + 1;
+	hardNum = 1; //rand() % 50 + 1;
 }
 
 
@@ -87,11 +86,14 @@ void hardMode() {
 void checkBank() {
 	if (p.playerCash > 0 || p.playerCash <= 20) {
 		easyMode();
+		cout  << "$" << p.playerCash << endl;
 	}
 	else if (p.playerCash > 20 || p.playerCash <= 100) {
 		mediumMode();
+		cout << "$" << p.playerCash << endl;
 	}
 	else if (p.playerCash > 100) {
 		hardMode();
+		cout << "$" << p.playerCash << endl;
 	}
 }
