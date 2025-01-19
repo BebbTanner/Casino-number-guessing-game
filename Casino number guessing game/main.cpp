@@ -10,5 +10,16 @@ using namespace std;
 
 int main() {
 
+	introduction();
+
+	////Generates a random number from 1 - 10.
+	//cout << rng.generateRandomNumber(1, 10) << endl;
+
+	////Generates a random number from 1 - 25.
+	//cout << rng.generateRandomNumber(1, 25) << endl;
+
+	////Generates a random number from 1 - 50.
+	//cout << rng.generateRandomNumber(1, 50) << endl;
+
 	return 0;
 }
