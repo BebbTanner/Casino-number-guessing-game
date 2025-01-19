@@ -8,7 +8,6 @@
 
 /*Global variables*/
 int playerGuess, easyNum, medNum, hardNum;
-bool win = true;
 
 
 //Definition of the introduction function
@@ -87,7 +86,6 @@ void mediumMode() {
 		cout << "Congradulations, you won this round!" << endl;
 
 		p.playerCash = p.playerCash + 10;
-
 	}
 	else {
 		cout << "Your number is: " << playerGuess << endl;

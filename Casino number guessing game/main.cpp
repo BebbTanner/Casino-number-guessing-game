@@ -54,7 +54,7 @@ int main() {
 	do {
 		easyMode();
 
-		if (p.playerCash == 20 && win == true) {
+		if (p.playerCash == 20) {
 			cout << "Lets up difficulty shall we?" << endl;
 			break;
 		}
@@ -62,7 +62,24 @@ int main() {
 			break;
 		}
 
-	} while ((p.playerCash > 0 || p.playerCash < 20) && win == true);
+	} while ((p.playerCash > 0 || p.playerCash < 20));
+
+	cout << "Your current score: $" << p.playerCash << endl;
+	system("pause");
+	cout << endl;
+
+	do {
+		mediumMode();
+
+		if (p.playerCash == 100) {
+			cout << "Lets up difficulty shall we?" << endl;
+			break;
+		}
+		else if (playerGuess != medNum) {
+			break;
+		}
+
+	} while ((p.playerCash > 20 || p.playerCash < 100));
 
 	return 0;
 }
