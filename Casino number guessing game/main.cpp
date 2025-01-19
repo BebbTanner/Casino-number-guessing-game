@@ -18,7 +18,7 @@ int main() {
 
 	//hardNum();
 
-	//gameplayLoop();
+	easyLoop();
 
 	return 0;
 }

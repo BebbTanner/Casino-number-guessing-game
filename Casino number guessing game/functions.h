@@ -46,24 +46,25 @@ void introduction() {
 	cout << endl;
 }
 
-void easyNum() {
-	cout << rng.generateRandomNum(1, 10) << endl;
-}
-
-void mediumNum() {
-	rng.generateRandomNum(1, 25);
-}
-
-void hardNum() {
-	rng.generateRandomNum(1, 50);
-}
-
 /*This will cycle through the different difficulty types.*/
-void gameplayLoop() {
+void easyLoop() {
 	using namespace std;
+	int easyNum = rng.generateRandomNum(1, 10);
+
+	//cout << easyNum << endl;
 
 	cout << "Guess a number (1- 10): " << endl;
 	cin >> playerGuess;
-	cout << "The number is. . . " << endl;
-	easyNum();
+	cout << "The number is. . . " << easyNum << endl;
+
+	if (playerGuess == easyNum) {
+		cout << "You won" << endl;
+
+		p.playerCash = p.playerCash + 5;
+	}
+
+	else if (playerGuess != easyNum) {
+		cout << "You lose" << endl;
+	}
+
 }
