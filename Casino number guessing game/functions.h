@@ -7,7 +7,7 @@
 #pragma once
 
 /*Global variables*/
-int playerGuess, easyNum, medNum, hardNum;
+int playerGuess, randomNum;
 
 
 //Definition of the introduction function
@@ -37,7 +37,7 @@ void introduction() {
 void easyMode() {
 	using namespace std;
 	srand(time(0));
-	easyNum = 1; //rand() % 10 + 1;
+	randomNum = 1; //rand() % 10 + 1;
 
 
 	cout << "The dealer has generated a number." << endl;
@@ -45,20 +45,20 @@ void easyMode() {
 	cin >> playerGuess;
 	cout << endl;
 
-	if (playerGuess == easyNum) {
+	if (playerGuess == randomNum) {
 		cout << "Your number is: " << playerGuess << endl;
 		cout << "The dealer number is. . . ";
 		this_thread::sleep_for(chrono::seconds(3));
-		cout << easyNum << endl;
+		cout << randomNum << endl;
 		cout << "Congradulations, you won this round!" << endl;
 
 		p.playerCash = p.playerCash + 5;
 	}
-	else if(playerGuess != easyNum) {
+	else if(playerGuess != randomNum) {
 		cout << "Your number is: " << playerGuess << endl;
 		cout << "The dealer number is. . . ";
 		this_thread::sleep_for(chrono::seconds(3));
-		cout << easyNum << endl;
+		cout << randomNum << endl;
 		cout << "You lost." << endl;
 	}
 
@@ -71,18 +71,18 @@ void easyMode() {
 void mediumMode() {
 	using namespace std;
 	srand(time(0));
-	medNum = 2;//rand() % 25 + 1;
+	randomNum = 2;//rand() % 25 + 1;
 
 	cout << "The dealer has generated a number." << endl;
 	cout << "Please guess a number (1-25): " << endl;
 	cin >> playerGuess;
 	cout << endl;
 
-	if (playerGuess == medNum) {
+	if (playerGuess == randomNum) {
 		cout << "Your number is: " << playerGuess << endl;
 		cout << "The dealer number is. . . ";
 		this_thread::sleep_for(chrono::seconds(3));
-		cout << medNum << endl;
+		cout << randomNum << endl;
 		cout << "Congradulations, you won this round!" << endl;
 
 		p.playerCash = p.playerCash + 10;
@@ -91,7 +91,7 @@ void mediumMode() {
 		cout << "Your number is: " << playerGuess << endl;
 		cout << "The dealer number is. . . ";
 		this_thread::sleep_for(chrono::seconds(3));
-		cout << medNum << endl;
+		cout << randomNum << endl;
 		cout << "You lost." << endl;
 	}
 
@@ -103,30 +103,29 @@ void mediumMode() {
 void hardMode() {
 	using namespace std;
 	srand(time(0));
-	hardNum = 3; //rand() % 50 + 1;
+	randomNum = 3; //rand() % 50 + 1;
 
 	cout << "The dealer has generated a number." << endl;
 	cout << "Please guess a number (1-50): " << endl;
 	cin >> playerGuess;
 	cout << endl;
 
-	if (playerGuess == hardNum) {
+	if (playerGuess == randomNum) {
 		cout << "Your number is: " << playerGuess << endl;
-		cout << "The dealer number is. . . ";
-		this_thread::sleep_for(chrono::seconds(3));
-		cout << hardNum << endl;
-		cout << "Congradulations, you won this round!" << endl;
+			cout << "The dealer number is. . . ";
+			this_thread::sleep_for(chrono::seconds(3));
+			cout << randomNum << endl;
+			cout << "Congradulations, you won this round!" << endl;
 
-		p.playerCash = p.playerCash + 20;
+			p.playerCash = p.playerCash + 20;
+
 	}
 	else {
 		cout << "Your number is: " << playerGuess << endl;
 		cout << "The dealer number is. . . ";
 		this_thread::sleep_for(chrono::seconds(3));
-		cout << hardNum << endl;
+		cout << randomNum << endl;
 		cout << "You lost." << endl;
-
-		cout << p.playerName << " Score: $" << p.playerCash << endl;
 	}
 
 	cout << endl;
@@ -134,5 +133,5 @@ void hardMode() {
 
 
 void gambling() {
-
+	
 }

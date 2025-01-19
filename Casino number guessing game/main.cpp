@@ -51,35 +51,57 @@ int main() {
 
 
 	//Now the gameplay loop works. I need to figure out how to break out when the player guesses incorrectly.
-	do {
-		easyMode();
 
-		if (p.playerCash == 20) {
-			cout << "Lets up difficulty shall we?" << endl;
-			break;
-		}
-		else if (playerGuess != easyNum) {
-			break;
-		}
+	//bool win = true;
+	//if (win == true) {
+	//	do {
+	//		easyMode();
 
-	} while ((p.playerCash > 0 || p.playerCash < 20));
+	//		if (p.playerCash == 20) {
+	//			cout << "Lets up difficulty shall we?" << endl;
+	//			break;
+	//		}
+	//		else if (playerGuess != easyNum) {
+	//			win = false;
+	//			break;
+	//		}
 
-	cout << "Your current score: $" << p.playerCash << endl;
-	system("pause");
-	cout << endl;
+	//	} while ((p.playerCash > 0 || p.playerCash < 20));
 
-	do {
-		mediumMode();
+	//	do {
+	//		mediumMode();
 
-		if (p.playerCash == 100) {
-			cout << "Lets up difficulty shall we?" << endl;
-			break;
-		}
-		else if (playerGuess != medNum) {
-			break;
-		}
+	//		if (p.playerCash == 100) {
+	//			cout << "Lets up difficulty shall we?" << endl;
+	//			break;
+	//		}
+	//		else if (playerGuess != medNum) {
+	//			win = false;
+	//			break;
+	//		}
 
-	} while ((p.playerCash > 20 || p.playerCash < 100));
+	//	} while ((p.playerCash > 20 || p.playerCash < 100));
+
+	//	char keepGoing;
+
+	//	cout << "Would you like to keep going? " << endl;
+	//	cin >> keepGoing;
+
+	//	do {
+
+	//		hardMode();
+
+	//		if (playerGuess != hardNum) {
+	//			win = false;
+	//			break;
+	//		}
+	//	} while (p.playerCash > 100 && (keepGoing == 'Y' | keepGoing == 'y'));
+
+	//}
+
+	//else if () {
+
+	//}
 
 	return 0;
 }
