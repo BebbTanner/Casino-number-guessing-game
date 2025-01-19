@@ -44,3 +44,20 @@ void introduction() {
 	system("pause");
 	cout << endl;
 }
+
+void easyNum() {
+	rng.generateRandomNum(1, 10);
+}
+
+void mediumNum() {
+	rng.generateRandomNum(1, 25);
+}
+
+void hardNum() {
+	rng.generateRandomNum(1, 50);
+}
+
+/*This will cycle through the different difficulty types.*/
+void gameplayLoop() {
+
+}

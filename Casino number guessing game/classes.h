@@ -22,7 +22,7 @@ public:
 		srand(seed);
 	}
 
-	int generateRandomNumber(int min, int max) {
+	int generateRandomNum(int min, int max) {
 		return min + rand() % (max - min + 1);
 	}
 
