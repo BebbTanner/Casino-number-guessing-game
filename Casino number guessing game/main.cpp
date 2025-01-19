@@ -47,17 +47,18 @@ int main() {
 	player cash > 0
 	player cash < 20
 	win == true
-	
-	When the player hits $20, the loop keeps going because win is still equal to true.
-	
-	I feel like I am on the correct path. I think that I need use a combonation of an if statement and a loop of some kind.*/
-	if (p.playerCash != 20 && win == true) {
-		easyMode();
-	}
-	else {
-		cout << "you smell" << endl;
-	}
+	}*/
 
+	do {
+		easyMode();
+
+		if (p.playerCash == 20 && win == true) {
+			break;
+		}
+
+	} while ((p.playerCash > 0 || p.playerCash < 20) && win == true);
+
+	cout << "You broke out of the loop" << endl;
 
 	return 0;
 }

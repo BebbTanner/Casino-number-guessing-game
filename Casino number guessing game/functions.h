@@ -57,7 +57,6 @@ void easyMode() {
 		cout << p.playerCash << endl;
 	}
 	else if(playerGuess != easyNum) {
-		win = false;
 		cout << "Your number is: " << playerGuess << endl;
 		cout << "The dealer number is. . . ";
 		this_thread::sleep_for(chrono::seconds(3));
