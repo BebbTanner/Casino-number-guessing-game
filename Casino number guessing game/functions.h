@@ -17,9 +17,9 @@ void introduction() {
 	cout << "Please enter your name: " << endl;
 	cin >> p.playerName;
 	cout << endl;
-	cout << "Welcome, " << p.playerName << " to Bruce's casino!" << endl;
+	cout << "Welcome " << p.playerName << ", I am the dealer" << endl;
 	this_thread::sleep_for(chrono::seconds(5));
-	cout << "You will be playing a number guessing game with the dealer." << endl;
+	cout << "We will be playing a number guessing game." << endl;
 	this_thread::sleep_for(chrono::seconds(5));
 	cout << "Each time you guess correctly you will be rewarded with some money." << endl;
 	this_thread::sleep_for(chrono::seconds(5));
@@ -29,6 +29,7 @@ void introduction() {
 	this_thread::sleep_for(chrono::seconds(5));
 	cout << "Are you ready to play, " << p.playerName << "?" << endl;
 	system("pause");
+	cout << endl;
 }
 
 
@@ -52,8 +53,6 @@ void easyMode() {
 		cout << "Congradulations, you won this round!" << endl;
 
 		p.playerCash = p.playerCash + 5;
-
-		cout << "$" << p.playerCash << endl;
 	}
 	else {
 		cout << "Your number is: " << playerGuess << endl;
@@ -88,7 +87,6 @@ void mediumMode() {
 
 		p.playerCash = p.playerCash + 10;
 
-		cout << "$" << p.playerCash << endl;
 	}
 	else {
 		cout << "Your number is: " << playerGuess << endl;
@@ -100,6 +98,7 @@ void mediumMode() {
 
 	cout << endl;
 }
+
 
 //Definition of the genHardNum function
 void hardMode() {
@@ -120,8 +119,6 @@ void hardMode() {
 		cout << "Congradulations, you won this round!" << endl;
 
 		p.playerCash = p.playerCash + 20;
-
-		cout << "$" << p.playerCash << endl;
 	}
 	else {
 		cout << "Your number is: " << playerGuess << endl;

@@ -33,12 +33,15 @@ using namespace std;
 
 int main() {
 
-	//introduction();
+	introduction();
 
 	do{
 		easyMode();
 	} while (p.playerCash < 20);
 
+	cout << "Current cash: $" << p.playerCash << endl;
+	cout << "Let's kick up the difficulty shall we?" << endl << endl;
+	
 	do {
 		mediumMode();
 	} while (p.playerCash < 100);
