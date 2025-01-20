@@ -8,7 +8,7 @@
 
 /*Global variables*/
 int playerGuess;
-bool win = true;
+bool win;
 
 	//	do {
 	//		easyMode();
@@ -29,8 +29,19 @@ void menu() {
 
 }
 
-void dealer() {
-	cout << "What is your guess? (1-10): " << endl;
+void roundWin() {
+	win = true;
+	p.playerCash = p.playerCash + 5;
+
+	cout << "Congradulations, you one this round!" << endl;
+	cout << "Bank: $" << p.playerCash << endl;
+}
+
+void roundLoss() {
+	win = false;
+
+	cout << "You lost." << endl;
+	cout << "Final Score: $" << p.playerCash << endl;
 }
 
 //Definition of the introduction function
@@ -57,5 +68,7 @@ void introduction() {
 
 /*This will cycle through the different difficulty types.*/
 void easyLoop() {
-	dealer();
+	cout << "Please guess the number I have selected (1-10): " << endl;
+	cin >> playerGuess;
+	cout << endl;
 }
