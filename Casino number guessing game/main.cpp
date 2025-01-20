@@ -16,41 +16,6 @@ int main() {
 
 	//introduction();
 
-	do {
-
-		//Breaks out when the player guesses incorrectly.
-		//Breaks out whe the cash reaches 30.
-		while (p.playerCash < 30 && win == true) {
-			easyMode();
-		}
-
-		if (win == false) {
-			break;
-		}
-
-		cout << win << endl << "start med" << endl;
-		system("pause");
-		cout << endl;
-
-		//Breaks out when the player guesses incorrectly
-		//Breaks out when the cash reaches 100
-		while (p.playerCash < 100 && win == true) {
-			mediumMode();
-		}
-
-		if (win == false) {
-			break;
-		}
-
-		cout << win << endl << "start hard" << endl;
-		system("pause");
-		cout << endl;
-
-		//Breaks out when the player guesses incorrectly
-		while (p.playerCash >= 100 && win == true) {
-			hardMode();
-		}
-
-	} while (win == true);
+	guessingGame();
 
 }

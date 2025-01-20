@@ -32,7 +32,6 @@ void randomNum(int &x, int &y) {
 	
 	for (int i = 1; i <= 1; i++) {
 		random = random = x + rand() % (y - x + 1);
-		cout << random << endl;
 	}
 
 }
@@ -65,6 +64,10 @@ void roundWin() {
 	win = true;
 	p.playerCash = p.playerCash + 10;
 
+	cout << "The number was. . ." << endl;
+	this_thread::sleep_for(chrono::seconds(3));
+	cout << random << endl;
+
 	cout << "Congradulations, you one this round!" << endl;
 	cout << "Bank: $" << p.playerCash << endl;
 }
@@ -73,6 +76,9 @@ void roundWin() {
 void roundLoss() {
 	win = false;
 
+	cout << "The number was. . ." << endl;
+	this_thread::sleep_for(chrono::seconds(3));
+	cout << random << endl;
 	cout << "Game Over." << endl;
 	cout << "Final Score: $" << p.playerCash << endl;
 }
@@ -135,33 +141,39 @@ void hardMode() {
 
 void guessingGame() {
 	do {
-		do {
+
+		//Breaks out when the player guesses incorrectly.
+		//Breaks out whe the cash reaches 30.
+		while (p.playerCash < 30 && win == true) {
 			easyMode();
+		}
 
-			if (p.playerCash >= 30) {
-				break;
-			}
+		if (win == false) {
+			break;
+		}
 
-		} while (win == true);
-
-		cout << "medium mode" << endl;
+		cout << win << endl << "start med" << endl;
 		system("pause");
+		cout << endl;
 
-		do {
+		//Breaks out when the player guesses incorrectly
+		//Breaks out when the cash reaches 100
+		while (p.playerCash < 100 && win == true) {
 			mediumMode();
+		}
 
-			if (p.playerCash >= 100) {
-				break;
-			}
+		if (win == false) {
+			break;
+		}
 
-		} while (win == true);
-
-		cout << "hard mode" << endl;
+		cout << win << endl << "start hard" << endl;
 		system("pause");
+		cout << endl;
 
-		do {
+		//Breaks out when the player guesses incorrectly
+		while (p.playerCash >= 100 && win == true) {
 			hardMode();
-		} while (win == true);
+		}
 
 	} while (win == true);
 
