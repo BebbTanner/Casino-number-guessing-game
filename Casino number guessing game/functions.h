@@ -93,6 +93,7 @@ void easyMode() {
 	else if (playerGuess != random) {
 		roundLoss();
 	}
+
 }
 
 
