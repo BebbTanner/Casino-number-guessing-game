@@ -47,12 +47,27 @@ int main() {
 	/*
 	It breaks out of the while loop when cash < 30 and win == true.
 	It does not break out of the do while loop because win is still equal to true but, it does not repeat the while loop which is correct.
+	Easymode breaks out when the player guesses incorrectly. This sets win to false.
 	*/
 	do {
 
+		//Breaks out when the player guesses incorrectly.
+		//Breaks out whe the cash reaches 30.
 		while (p.playerCash < 30 && win == true) {
 			easyMode();
 		}
+
+		cout << "medium mode start" << endl;
+		system("pause");
+
+		//Breaks out when the player guesses incorrectly
+		//Breaks out when the cash reaches 100
+		while (p.playerCash < 100 && win == true) {
+			mediumMode();
+		}
+
+		cout << "medium mode end" << endl;
+		system("pause");
 
 	} while (win == true);
 
