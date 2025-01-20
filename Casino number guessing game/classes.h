@@ -4,7 +4,6 @@ class playerInfo {
 public:
 	int playerCash;
 	string playerName;
-	char playerResponse;
 };
 
 //Global objects
