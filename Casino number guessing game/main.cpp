@@ -18,4 +18,15 @@ int main() {
 
 	guessingGame();
 
+/*
+	Needs:
+		string multidimensional Array with 5 slots
+			sort by player cash as int
+			convert player cash to a string
+			print out leaderboard
+			save the leaderboard
+			output to a txt file?
+		This should all be under the roundLoss function.
+		if the player cash is $0 they will not be on the leaderboard.
+*/
 }
