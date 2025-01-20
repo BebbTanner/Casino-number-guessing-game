@@ -14,7 +14,7 @@ int main() {
 	//In order for the randomNum function to work srand must me at the top of main cpp.
 	srand((unsigned)time(NULL));
 
-	//introduction();
+	introduction();
 
 	guessingGame();
 
