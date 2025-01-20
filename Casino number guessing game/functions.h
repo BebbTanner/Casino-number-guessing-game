@@ -29,16 +29,16 @@ bool win;
 
 void randomNum(int &x, int &y) {
 	
-
 	for (int i = 1; i <= 1; i++) {
 		random = random = x + rand() % (y - x + 1);
 		cout << random << endl;
 	}
+
 }
 
 void roundWin() {
 	win = true;
-	p.playerCash = p.playerCash + 5;
+	p.playerCash = p.playerCash + 10;
 
 	cout << "Congradulations, you one this round!" << endl;
 	cout << "Bank: $" << p.playerCash << endl;
@@ -73,3 +73,19 @@ void introduction() {
 	cout << endl;
 }
 
+void easyMode() {
+	int min = 1;
+	int max = 10;
+
+	randomNum(min, max);
+
+	cout << "Please guess a number (1 - 10):" << endl;
+	cin >> playerGuess;
+
+		if (playerGuess == random) {
+			roundWin();
+		}
+		else if (playerGuess != random) {
+			roundLoss();
+		}
+}

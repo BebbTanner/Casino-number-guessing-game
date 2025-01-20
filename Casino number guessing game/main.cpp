@@ -11,20 +11,7 @@ using namespace std;
 int main() {
 	srand((unsigned)time(NULL));
 
-	int min = 1;
-	int max = 10;
-
-	int random;
-
-	//for (int i = 1; i <= 1; i++) {
-	//	random = random = rand() % 10 + 1;
-	//	cout << random << endl;
-	//}
-
-	randomNum(min, max);
-	randomNum(min, max);
-	randomNum(min, max);
-
+	easyMode();
 
 	return 0;
 
