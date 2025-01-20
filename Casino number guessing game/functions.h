@@ -10,6 +10,7 @@
 
 /*Global variables*/
 int playerGuess, random;
+int lowerBound, upperBound;
 bool win;
 
 	//	do {
@@ -36,20 +37,6 @@ void randomNum(int &x, int &y) {
 
 }
 
-void roundWin() {
-	win = true;
-	p.playerCash = p.playerCash + 10;
-
-	cout << "Congradulations, you one this round!" << endl;
-	cout << "Bank: $" << p.playerCash << endl;
-}
-
-void roundLoss() {
-	win = false;
-
-	cout << "You lost." << endl;
-	cout << "Final Score: $" << p.playerCash << endl;
-}
 
 //Definition of the introduction function
 void introduction() {
@@ -73,19 +60,75 @@ void introduction() {
 	cout << endl;
 }
 
+
+void roundWin() {
+	win = true;
+	p.playerCash = p.playerCash + 10;
+
+	cout << "Congradulations, you one this round!" << endl;
+	cout << "Bank: $" << p.playerCash << endl;
+}
+
+
+void roundLoss() {
+	win = false;
+
+	cout << "You lost." << endl;
+	cout << "Final Score: $" << p.playerCash << endl;
+}
+
+
 void easyMode() {
-	int min = 1;
-	int max = 10;
+	lowerBound = 1;
+	upperBound = 10;
 
-	randomNum(min, max);
+	randomNum(lowerBound, upperBound);
 
-	cout << "Please guess a number (1 - 10):" << endl;
 	cin >> playerGuess;
 
-		if (playerGuess == random) {
-			roundWin();
-		}
-		else if (playerGuess != random) {
-			roundLoss();
-		}
+	if (playerGuess == random) {
+		roundWin();
+	}
+
+	else if (playerGuess != random) {
+		roundLoss();
+	}
 }
+
+
+void mediumMode() {
+	lowerBound = 1;
+	upperBound = 15;
+
+	randomNum(lowerBound, upperBound);
+
+	cin >> playerGuess;
+
+	if (playerGuess == random) {
+		roundWin();
+	}
+
+	else if (playerGuess != random) {
+		roundLoss();
+	}
+}
+
+
+void hardMode() {
+	lowerBound = 1;
+	upperBound = 20;
+
+	randomNum(lowerBound, upperBound);
+
+	cin >> playerGuess;
+
+	if (playerGuess == random) {
+		roundWin();
+	}
+
+	else if (playerGuess != random) {
+		roundLoss();
+	}
+}
+
+

@@ -9,10 +9,9 @@ It also uses other features such as loops and conditionals to create a logical s
 using namespace std;
 
 int main() {
+	//In order for the randomNum function to work srand must me at the top of main cpp.
 	srand((unsigned)time(NULL));
 
-	easyMode();
-
-	return 0;
+	//introduction();
 
 }

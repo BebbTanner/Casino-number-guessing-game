@@ -1,8 +1,3 @@
-#include <string>
-#include <cstdlib>
-#include <ctime>
-#include <chrono>
-#include <thread>
 using namespace std;
 
 class playerInfo {
