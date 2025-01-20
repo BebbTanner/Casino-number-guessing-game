@@ -7,37 +7,19 @@
 #pragma once
 
 
-
 /*Global variables*/
 int playerGuess, random;
 int lowerBound, upperBound;
 bool win = true;
 
-	//	do {
-	//		easyMode();
-
-	//		if (p.playerCash == 20) {
-	//			cout << "Lets up difficulty shall we?" << endl;
-	//			break;
-	//		}
-	//		else if (playerGuess != easyNum) {
-	//			win = false;
-	//			break;
-	//		}
-
-	//	} while ((p.playerCash > 0 || p.playerCash < 20));
-
 
 void randomNum(int &x, int &y) {
-	
 	for (int i = 1; i <= 1; i++) {
 		random = random = x + rand() % (y - x + 1);
 	}
-
 }
 
 
-//Definition of the introduction function
 void introduction() {
 	using namespace std;
 
@@ -87,7 +69,6 @@ void easyMode() {
 	upperBound = 5;
 
 	randomNum(lowerBound, upperBound);
-
 	cout << "Please guess a number (1 - 5): " << endl;
 
 	cin >> playerGuess;
@@ -99,7 +80,6 @@ void easyMode() {
 	else if (playerGuess != random) {
 		roundLoss();
 	}
-
 }
 
 
@@ -108,7 +88,6 @@ void mediumMode() {
 	upperBound = 10;
 
 	randomNum(lowerBound, upperBound);
-
 	cout << "Please guess a number (1 - 10): " << endl;
 
 	cin >> playerGuess;
@@ -130,7 +109,6 @@ void hardMode() {
 	randomNum(lowerBound, upperBound);
 
 	cout << "Please guess a number (1 - 15): " << endl;
-
 	cin >> playerGuess;
 
 	if (playerGuess == random) {
@@ -146,8 +124,6 @@ void hardMode() {
 void guessingGame() {
 	do {
 
-		//Breaks out when the player guesses incorrectly.
-		//Breaks out whe the cash reaches 30.
 		while (p.playerCash < 30 && win == true) {
 			easyMode();
 		}
@@ -156,12 +132,10 @@ void guessingGame() {
 			break;
 		}
 
-		cout << win << endl << "start med" << endl;
+		cout << "Let's make it a little more challenging." << endl;
 		system("pause");
 		cout << endl;
 
-		//Breaks out when the player guesses incorrectly
-		//Breaks out when the cash reaches 100
 		while (p.playerCash < 100 && win == true) {
 			mediumMode();
 		}
@@ -170,15 +144,14 @@ void guessingGame() {
 			break;
 		}
 
-		cout << win << endl << "start hard" << endl;
+		cout << "This is the final difficulty increase." << endl;
+		cout << "Let's see how far you can go." << endl;
 		system("pause");
 		cout << endl;
 
-		//Breaks out when the player guesses incorrectly
 		while (p.playerCash >= 100 && win == true) {
 			hardMode();
 		}
 
 	} while (win == true);
-
 }
