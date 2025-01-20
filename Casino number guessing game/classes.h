@@ -14,7 +14,7 @@ public:
 	string playerName;
 };
 
-class dealerPrompts {
+class  {
 
 };
 /*

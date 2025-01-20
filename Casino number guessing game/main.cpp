@@ -9,8 +9,26 @@ It also uses other features such as loops and conditionals to create a logical s
 using namespace std;
 
 int main() {
+	int guess;
 
-	easyLoop();
+	srand((unsigned)time(NULL));
+
+	int random;
+
+	for (int i = 1; i <= 1; i++) {
+		random = random = rand() % 10 + 1;
+		cout << random << endl;
+	}
+
+	cin >> guess;
+
+	if (guess == random) {
+		cout << 1 << endl;
+	}
+	else if (guess != random) {
+		cout << 2;
+	}
+
 
 	return 0;
 

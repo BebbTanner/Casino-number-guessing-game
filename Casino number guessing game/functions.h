@@ -6,8 +6,10 @@
 #include "classes.h"
 #pragma once
 
+
+
 /*Global variables*/
-int playerGuess;
+int playerGuess, randomNum;
 bool win;
 
 	//	do {
@@ -68,6 +70,9 @@ void introduction() {
 
 /*This will cycle through the different difficulty types.*/
 void easyLoop() {
+	srand(time(0));
+	
+
 	cout << "Please guess the number I have selected (1-10): " << endl;
 	cin >> playerGuess;
 	cout << endl;
