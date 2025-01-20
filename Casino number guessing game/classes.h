@@ -14,20 +14,15 @@ public:
 	string playerName;
 };
 
-class randomNum {
-public:
-	randomNum() {
-		int seed;
-		seed = time(0);
-		srand(seed);
-	}
-
-	int generateRandomNum(int min, int max) {
-		return min + rand() % (max - min + 1);
-	}
+class dealerPrompts {
 
 };
+/*
+What all do each of the difficulty settings loops have?
+Could I turn them into a class?
+
+
+*/
 
 //Global objects
 playerInfo p;
-randomNum rng;

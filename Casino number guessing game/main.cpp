@@ -10,15 +10,8 @@ using namespace std;
 
 int main() {
 
-	//introduction();
-
-	//easyNum();
-
-	//mediumNum();
-
-	//hardNum();
-
-	//easyLoop();
+	easyLoop();
 
 	return 0;
+
 }

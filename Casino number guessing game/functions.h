@@ -25,6 +25,14 @@ bool win = true;
 	//	} while ((p.playerCash > 0 || p.playerCash < 20));
 
 
+void menu() {
+
+}
+
+void dealer() {
+	cout << "What is your guess? (1-10): " << endl;
+}
+
 //Definition of the introduction function
 void introduction() {
 	using namespace std;
@@ -33,15 +41,15 @@ void introduction() {
 	cin >> p.playerName;
 	cout << endl;
 	cout << "Welcome " << p.playerName << ", I am the dealer" << endl;
-	this_thread::sleep_for(chrono::seconds(5));
+	this_thread::sleep_for(chrono::seconds(3));
 	cout << "We will be playing a number guessing game." << endl;
-	this_thread::sleep_for(chrono::seconds(5));
+	this_thread::sleep_for(chrono::seconds(3));
 	cout << "Each time you guess correctly you will be rewarded with some money." << endl;
-	this_thread::sleep_for(chrono::seconds(5));
+	this_thread::sleep_for(chrono::seconds(3));
 	cout << "The more money you have, the harder the game will get." << endl;
-	this_thread::sleep_for(chrono::seconds(5));
+	this_thread::sleep_for(chrono::seconds(3));
 	cout << "The harder the difficulty gets, you will be rewared with more money." << endl;
-	this_thread::sleep_for(chrono::seconds(5));
+	this_thread::sleep_for(chrono::seconds(3));
 	cout << "Are you ready to play, " << p.playerName << "?" << endl;
 	system("pause");
 	cout << endl;
@@ -49,39 +57,5 @@ void introduction() {
 
 /*This will cycle through the different difficulty types.*/
 void easyLoop() {
-/*
-To do:
-
-Add condition that checks the playerCash amount.			X
-	If it is more than $20, break out of the loop.			X
-
-Generate a random number for each case.
-
-*/
-	using namespace std;
-	int easyNum = rng.generateRandomNum(1, 10);
-
-	cout << easyNum << endl;
-
-	//The do while loop works correctly however, once it generates the random number that is the number used for each case.
-	do {
-
-		cout << "Guess a number (1- 10): " << endl;
-		cin >> playerGuess;
-		cout << "The number is. . . " << easyNum << endl;
-
-		if (playerGuess == easyNum) {
-			cout << "You won" << endl;
-
-			p.playerCash = p.playerCash + 5;
-		}
-
-		else if (playerGuess != easyNum) {
-			win = false;
-			cout << "You lose" << endl;
-			break;
-		}
-
-	} while (p.playerCash < 20 && win == true);
-
+	dealer();
 }
