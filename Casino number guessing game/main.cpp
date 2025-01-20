@@ -9,25 +9,21 @@ It also uses other features such as loops and conditionals to create a logical s
 using namespace std;
 
 int main() {
-	int guess;
-
 	srand((unsigned)time(NULL));
+
+	int min = 1;
+	int max = 10;
 
 	int random;
 
-	for (int i = 1; i <= 1; i++) {
-		random = random = rand() % 10 + 1;
-		cout << random << endl;
-	}
+	//for (int i = 1; i <= 1; i++) {
+	//	random = random = rand() % 10 + 1;
+	//	cout << random << endl;
+	//}
 
-	cin >> guess;
-
-	if (guess == random) {
-		cout << 1 << endl;
-	}
-	else if (guess != random) {
-		cout << 2;
-	}
+	randomNum(min, max);
+	randomNum(min, max);
+	randomNum(min, max);
 
 
 	return 0;

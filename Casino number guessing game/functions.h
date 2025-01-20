@@ -9,7 +9,7 @@
 
 
 /*Global variables*/
-int playerGuess, randomNum;
+int playerGuess, random;
 bool win;
 
 	//	do {
@@ -27,8 +27,13 @@ bool win;
 	//	} while ((p.playerCash > 0 || p.playerCash < 20));
 
 
-void menu() {
+void randomNum(int &x, int &y) {
+	
 
+	for (int i = 1; i <= 1; i++) {
+		random = random = x + rand() % (y - x + 1);
+		cout << random << endl;
+	}
 }
 
 void roundWin() {
@@ -68,12 +73,3 @@ void introduction() {
 	cout << endl;
 }
 
-/*This will cycle through the different difficulty types.*/
-void easyLoop() {
-	srand(time(0));
-	
-
-	cout << "Please guess the number I have selected (1-10): " << endl;
-	cin >> playerGuess;
-	cout << endl;
-}
