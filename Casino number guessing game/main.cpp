@@ -14,4 +14,46 @@ int main() {
 
 	//introduction();
 
+
+	//do {
+	//	easyMode();
+
+	//	if (p.playerCash >= 30) {
+	//		break;
+	//	}
+
+	//} while (win == true);
+
+	//cout << "medium mode" << endl;
+	//system("pause");
+
+	//do {
+	//	mediumMode();
+
+	//	if (p.playerCash >= 100) {
+	//		break;
+	//	}
+
+	//} while (win == true);
+
+	//cout << "hard mode" << endl;
+	//system("pause");
+
+	//do {
+	//	hardMode();
+	//} while (win == true);
+
+
+	/*
+	It breaks out of the while loop when cash < 30 and win == true.
+	It does not break out of the do while loop because win is still equal to true but, it does not repeat the while loop which is correct.
+	*/
+	do {
+
+		while (p.playerCash < 30 && win == true) {
+			easyMode();
+		}
+
+	} while (win == true);
+
 }

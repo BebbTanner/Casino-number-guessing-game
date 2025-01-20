@@ -11,7 +11,7 @@
 /*Global variables*/
 int playerGuess, random;
 int lowerBound, upperBound;
-bool win;
+bool win = true;
 
 	//	do {
 	//		easyMode();
@@ -73,7 +73,7 @@ void roundWin() {
 void roundLoss() {
 	win = false;
 
-	cout << "You lost." << endl;
+	cout << "Game Over." << endl;
 	cout << "Final Score: $" << p.playerCash << endl;
 }
 
@@ -132,3 +132,36 @@ void hardMode() {
 }
 
 
+void guessingGame() {
+	do {
+		do {
+			easyMode();
+
+			if (p.playerCash >= 30) {
+				break;
+			}
+
+		} while (win == true);
+
+		cout << "medium mode" << endl;
+		system("pause");
+
+		do {
+			mediumMode();
+
+			if (p.playerCash >= 100) {
+				break;
+			}
+
+		} while (win == true);
+
+		cout << "hard mode" << endl;
+		system("pause");
+
+		do {
+			hardMode();
+		} while (win == true);
+
+	} while (win == true);
+
+}
